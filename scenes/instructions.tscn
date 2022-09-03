@@ -1,0 +1,498 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/main_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/cards/ghali1.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/Nunito-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/cards/chili1.png" type="Texture" id=4]
+[ext_resource path="res://assets/cards/naru1.png" type="Texture" id=5]
+[ext_resource path="res://assets/cards/amaru1.png" type="Texture" id=6]
+[ext_resource path="res://scripts/instructions.gd" type="Script" id=7]
+[ext_resource path="res://assets/cards/amaru2.png" type="Texture" id=8]
+[ext_resource path="res://assets/cards/ghali2.png" type="Texture" id=9]
+[ext_resource path="res://assets/cards/naru2.png" type="Texture" id=10]
+[ext_resource path="res://assets/cards/chili2.png" type="Texture" id=11]
+[ext_resource path="res://assets/cards/chili3.png" type="Texture" id=12]
+[ext_resource path="res://assets/cards/amaru&ghali1.png" type="Texture" id=13]
+[ext_resource path="res://assets/cards/amaru&ghali2.png" type="Texture" id=14]
+[ext_resource path="res://assets/cards/chili&naru1.png" type="Texture" id=15]
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Instructions" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.964706 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -237.0
+margin_top = 27.0
+margin_right = 237.0
+margin_bottom = -64.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_right = 474.0
+margin_bottom = 771.0
+size_flags_vertical = 3
+
+[node name="MAIN" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+margin_right = 462.0
+margin_bottom = 1686.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_right = 462.0
+margin_bottom = 69.0
+text = "Como Jogar"
+align = 1
+
+[node name="Label1" type="Label" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 73.0
+margin_right = 462.0
+margin_bottom = 160.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "1. Clique nos cards e encontre os pares iguais."
+autowrap = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 164.0
+margin_right = 462.0
+margin_bottom = 251.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "2. Adivinhe o nome do gato em até 10 segundos."
+autowrap = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 255.0
+margin_right = 462.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 274.0
+margin_right = 474.0
+margin_bottom = 431.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer"]
+margin_left = 129.0
+margin_right = 474.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+text = "Ghali tem os olhos amarelos e grandes. É pequenina, tem o pelo bastante fino e é super tranquila."
+valign = 1
+autowrap = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 274.0
+margin_right = 474.0
+margin_bottom = 289.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 475.0
+margin_right = 462.0
+margin_bottom = 672.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer2"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer2"]
+margin_left = 129.0
+margin_right = 462.0
+margin_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+text = "Amaru é o único macho, o maior e mais velho de todos. Pode ser bravo e imprevisível, mas gosta de companhia."
+valign = 1
+autowrap = true
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 255.0
+margin_right = 474.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 695.0
+margin_right = 462.0
+margin_bottom = 892.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer3"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer3"]
+margin_left = 129.0
+margin_right = 462.0
+margin_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+text = "Chili é magrinha, comprida e tem o maior rabo de todos. Tem duas cores nos olhos e geralmente fica com a língua pra fora."
+valign = 1
+autowrap = true
+
+[node name="MarginContainer5" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 896.0
+margin_right = 462.0
+margin_bottom = 911.0
+rect_min_size = Vector2( 0, 15 )
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+visible = false
+margin_top = 915.0
+margin_right = 462.0
+margin_bottom = 1112.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer4"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/HBoxContainer4"]
+margin_left = 129.0
+margin_right = 462.0
+margin_bottom = 197.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 1 )
+text = "Naru tem os olhos bem amarelos e o pelo mais grosso. É a menor de todos, porém muito inteligente."
+valign = 1
+autowrap = true
+
+[node name="Ghali" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 274.0
+margin_right = 462.0
+margin_bottom = 506.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/Ghali"]
+margin_left = 170.0
+margin_right = 292.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+text = "Ghali"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MAIN/Ghali"]
+margin_left = 104.0
+margin_top = 73.0
+margin_right = 358.0
+margin_bottom = 198.0
+size_flags_horizontal = 4
+columns = 2
+
+[node name="Gato1" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Ghali/GridContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Gato2" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Ghali/GridContainer"]
+margin_left = 129.0
+margin_right = 254.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 9 )
+expand = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN/Ghali"]
+margin_top = 202.0
+margin_right = 462.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Amaru" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 510.0
+margin_right = 462.0
+margin_bottom = 742.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/Amaru"]
+margin_left = 152.0
+margin_right = 309.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+text = "Amaru"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MAIN/Amaru"]
+margin_left = 104.0
+margin_top = 73.0
+margin_right = 358.0
+margin_bottom = 198.0
+size_flags_horizontal = 4
+columns = 2
+
+[node name="Gato1" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Amaru/GridContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Gato2" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Amaru/GridContainer"]
+margin_left = 129.0
+margin_right = 254.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 8 )
+expand = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN/Amaru"]
+margin_top = 202.0
+margin_right = 462.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Chili" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 746.0
+margin_right = 462.0
+margin_bottom = 978.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/Chili"]
+margin_left = 178.0
+margin_right = 283.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+text = "Chili"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MAIN/Chili"]
+margin_left = 39.0
+margin_top = 73.0
+margin_right = 422.0
+margin_bottom = 198.0
+size_flags_horizontal = 4
+columns = 3
+
+[node name="Gato1" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Chili/GridContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Gato2" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Chili/GridContainer"]
+margin_left = 129.0
+margin_right = 254.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="Gato3" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Chili/GridContainer"]
+margin_left = 258.0
+margin_right = 383.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 12 )
+expand = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN/Chili"]
+margin_top = 202.0
+margin_right = 462.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Naru" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 982.0
+margin_right = 462.0
+margin_bottom = 1214.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/Naru"]
+margin_left = 174.0
+margin_right = 287.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+text = "Naru"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MAIN/Naru"]
+margin_left = 104.0
+margin_top = 73.0
+margin_right = 358.0
+margin_bottom = 198.0
+size_flags_horizontal = 4
+columns = 2
+
+[node name="Gato1" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Naru/GridContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Gato2" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Naru/GridContainer"]
+margin_left = 129.0
+margin_right = 254.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 10 )
+expand = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN/Naru"]
+margin_top = 202.0
+margin_right = 462.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Chili & Naru" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 1218.0
+margin_right = 462.0
+margin_bottom = 1450.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/Chili & Naru"]
+margin_left = 90.0
+margin_right = 372.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+text = "Chili & Naru"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MAIN/Chili & Naru"]
+margin_left = 168.0
+margin_top = 73.0
+margin_right = 293.0
+margin_bottom = 198.0
+size_flags_horizontal = 4
+columns = 3
+
+[node name="Gato1" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Chili & Naru/GridContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN/Chili & Naru"]
+margin_top = 202.0
+margin_right = 462.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="Amaru & Ghali" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MAIN"]
+margin_top = 1454.0
+margin_right = 462.0
+margin_bottom = 1686.0
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/MAIN/Amaru & Ghali"]
+margin_left = 59.0
+margin_right = 402.0
+margin_bottom = 69.0
+size_flags_horizontal = 4
+text = "Amaru & Ghali"
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/ScrollContainer/MAIN/Amaru & Ghali"]
+margin_left = 104.0
+margin_top = 73.0
+margin_right = 358.0
+margin_bottom = 198.0
+size_flags_horizontal = 4
+columns = 3
+
+[node name="Gato1" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Amaru & Ghali/GridContainer"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Gato2" type="TextureRect" parent="VBoxContainer/ScrollContainer/MAIN/Amaru & Ghali/GridContainer"]
+margin_left = 129.0
+margin_right = 254.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+size_flags_vertical = 0
+texture = ExtResource( 14 )
+expand = true
+
+[node name="margin" type="MarginContainer" parent="VBoxContainer/ScrollContainer/MAIN/Amaru & Ghali"]
+margin_top = 202.0
+margin_right = 462.0
+margin_bottom = 232.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="margin2" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 775.0
+margin_right = 474.0
+margin_bottom = 795.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="Voltar" type="Button" parent="VBoxContainer"]
+margin_left = 127.0
+margin_top = 799.0
+margin_right = 347.0
+margin_bottom = 869.0
+rect_min_size = Vector2( 220, 70 )
+size_flags_horizontal = 4
+text = "Voltar"
+
+[connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_Voltar_pressed"]
