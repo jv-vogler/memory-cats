@@ -16,7 +16,7 @@ A princípio é apenas um protótipo básico das mecânicas, mas é possível qu
 
 ### Através do navegador 
 
-* Acesse https://jv-v.itch.io/memory-cats.
+* Acesse https://jv-vogler.itch.io/memory-cats.
 * Clique em "Run game".
 
 ### Usando a Godot Engine (Versão 3.X)
